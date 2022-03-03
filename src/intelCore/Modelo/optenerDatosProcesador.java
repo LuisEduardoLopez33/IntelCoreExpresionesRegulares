@@ -45,9 +45,10 @@ public class optenerDatosProcesador {
         switch (gama){
             case "3": resultado.add("baja"); break;
             case "5": resultado.add("media"); break;
-            case "7": resultado.add("alta"); break;
+            case "7": resultado.add("alta") ; break;
             case "9": resultado.add("premium"); break;
         }
+        resultado.add(gama);
    }
 
    public void generacionProcesador(){
@@ -87,6 +88,7 @@ public class optenerDatosProcesador {
            }
        }catch(Exception e){
            System.out.println("sin prefijo");
+           resultado.add("");
        }
 
 
