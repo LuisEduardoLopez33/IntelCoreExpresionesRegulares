@@ -1,24 +1,44 @@
 package intelCore.Controller;
 
 import intelCore.Modelo.evaluarExpresiones;
+import intelCore.Modelo.optenerDatosProcesador;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class homeController {
-     evaluarExpresiones evaluar = new evaluarExpresiones();
+    String cadena = "";
+    evaluarExpresiones evaluar;
+    optenerDatosProcesador datos;
+    ObservableList<String> resultado = FXCollections.observableArrayList();
     @FXML
     private TextField entrada;
 
     @FXML
+    private Label i;
+
+    @FXML
+
+    private Label generacion;
+
+    @FXML
     void empezarOnMuse(MouseEvent event) {
-           String cadena = "";
+           cadena = "";
+           resultado.clear();
+           evaluar =  new evaluarExpresiones();
+           datos = new optenerDatosProcesador();
           cadena = entrada.getText();
           if(evaluar.validarDatosDeEntrada(cadena)){
-              System.out.println("hola Luis esta correcto mi pa:)");
+             resultado = datos.datosProcesador(cadena);
           }else{
-              System.out.println("no mi loco, no es correcta la entrada");
+
           }
+        for (String i : resultado) {
+            System.out.println(i);
+        }
     }
 
 }
