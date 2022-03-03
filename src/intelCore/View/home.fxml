@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intelCore.Controller.homeController">
+<AnchorPane opacity="0.97" prefHeight="467.0" prefWidth="400.0" style="-fx-background-color: #0263C4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intelCore.Controller.homeController">
    <children>
-      <Button layoutX="248.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#empezarOnMuse" text="ok" />
-      <TextField fx:id="entrada" layoutX="200.0" layoutY="208.0" />
+      <Rectangle fill="#0356b4" height="394.0" smooth="false" strokeType="INSIDE" width="328.0" />
+      <Rectangle fill="#037ccd" height="74.0" opacity="0.88" smooth="false" strokeType="INSIDE" width="400.0" />
+      <Rectangle fill="#4ca9e4" height="74.0" layoutX="329.0" smooth="false" strokeType="INSIDE" width="71.0" />
+      <Button layoutX="230.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#empezarOnMuse" style="-fx-background-color: #52ACE5;" text="OK" textFill="WHITE" />
+      <TextField fx:id="entrada" layoutX="48.0" layoutY="23.0" style="-fx-background-color: #52ACE5;" />
+      <Label fx:id="i" alignment="CENTER" layoutX="328.0" prefHeight="58.0" prefWidth="71.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="105.0" text="intel." textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="127.0" text="Core" textFill="WHITE">
+         <font>
+            <Font size="120.0" />
+         </font>
+      </Label>
+      <Label fx:id="generacion" alignment="CENTER" layoutX="81.0" layoutY="355.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
